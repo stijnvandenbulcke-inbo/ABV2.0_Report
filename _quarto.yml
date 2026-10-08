@@ -4,8 +4,8 @@ project:
     port: 4201
     browser: true
   render:
-    - "*.md"
-    - "*.qmd"
+    - "source/*.md"
+    - "source/*.qmd"
     - "!LICENSE.md" #ignore LICENSE.md
     - "!README.md" #ignore README.md
   output-dir: output
@@ -42,7 +42,7 @@ book:
   navbar:
     left:
       - text: Cover
-        file: index.qmd
+        file: source/index.qmd
     right:
       - icon: mastodon
         href: https://mastodon.online/@inbo
@@ -56,12 +56,12 @@ book:
             url:  https://github.com/inbo
   date: "8/10/2026"
   chapters:
-    - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
+    - source/index.qmd
+    - source/intro.qmd
+    - source/summary.qmd
+    - source/references.qmd
 
-bibliography: references.bib
+bibliography: source/references.bib
 
 format:
   flandersqmd-book-html: default
