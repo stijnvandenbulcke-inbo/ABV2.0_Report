@@ -1,0 +1,62 @@
+# STEEKPROEF
+
+Het huidig ABV meetnet is opgesteld door een steekproeftrekking uit UTM 1 x 1 km hokken. De regels van de trekking zijn gebaseerd op het oppervlakteaandeel van een bepaald landgebruik op basis van de Biologische Waarderingkaart (Vriens et al., 2011).
+
+- Landbouw: minstens 80% landbouw. 6311 hokken.
+- Urbaan: minstens 80% urbaan. 416 hokken.
+- Bos: minstens 80% bos. 319 hokken.
+- Suburbaan: minstens 80% suburbaan. 201 hokken.
+- Heide en duin: minstens 20% heide of duin. 199 hokken.
+- Moeras en water: minstens 20% moeras en water. 137 hokken
+
+In ieder gekozen hok worden er dan 6 metingen uitgevoerd per bezoek. Voor verdere details verwijzen we naar (citatie).
+Bij deze steekproef zijn er drie problemen. 
+
+- Een groot deel van Vlaander is niet beschikbaar voor de tellingen aangezien het Vlaams grondgebied zeer versnipperd is op ecologisch vlak. Indien men een uitspraak wil maken over de algemene broedvogels op Vlaams niveau, is het nodig om ook tellingen uit te voeren in de versnipperde gebieden. 
+- De twee strata "Heide en duin" en "Moeras en water", worden nu geteld in hokken waarvan minimaal 20% van het oppervlakte in het hok tot het respectievelijk strata toebehoort. De zes locaties waarin geteld worden kunnen in deze strata sterk verschillend zijn. 
+- De locaties waren niet altijd even bereikbaar.
+
+-> bewijs probleem 1
+-> bewijs probleem 2
+-> probleem 3 is anecdotisch
+
+Het doel van het hernieuwde meetnet is om deze problemen te verheffen.
+
+
+## FLEA
+
+In plaats van de Biologische Waarderingkaart vertrekken we nu vanuit de Flanders Ecosystem Accounting (FLEA) kaarten, typologie niveau 2. Deze kaarten worden gemaakt voor vorige en toekomstige jaren, we zullen de steekproef hierdoor ook accurater kunnen aanpassen indien de ecosystemen van bepaalde locaties veranderen.
+
+\includegraphics[width=\linewidth]{media/ecosystem_extent_2022_level2-1.png}
+
+De FLEA kaart niveau 2 heeft 31 gedefiniëerde ecosysteem typologiën. De steekproef om ieder verschillend type voldoende te samplen zou te groot zijn. We hergrouperen deze typologiën in tien bredere strata en een gemengde categorie:
+
+- Urbaan: Bebouwing (1.1), verharde bodem (1.2) en onzekere bodembedekking binnen bebouwde ruimte (settlements = nederzettingen letterlijk vertaald) (1.6).
+- Urbaan groen: Hoog groen (1.3) en laag groen/onbedekte bodem binnen bebouwde ruimte (1.4).
+- Akker: Alle agrarische typen, waaronder eenjarige gewassen (2.1), permanente gewassen (2.2), agroforestry (2.3), gemengde landbouw (2.4) en overige landbouwgronden (2.5).
+- Grasland: Intensief/beheerd grasland (3.1) en halfnatuurlijk grasland (3.2).
+- Bos: Ongespecificeerd bos (4.0), loofbos (4.1), naaldbos en exoten (4.2), overgangszone bos/struikgewas (4.3) en bomenrijen/heggen (4.4).
+- Duinen en heide: heide (5.1), landduinen (6.2), kustduinen/stranden (11.2) en schorren/zoutmoerassen (11.3).
+- Moeras: Binnenlandse moerassen op minerale bodem (7.1) en veengebieden/venen (7.2).
+- Stilstaand en lopend water: Stilstaand water in bebouwde ruimte (1.5), rivieren en beken (8.1), kanalen en grachten (8.2), meren en vijvers (9.1) en kunstmatige reservoirs (9.2).
+- Estuarium: Estuaria en baaien (10.1).
+- Getijdengebied en overgangswater: getijdenplaten (10.2) en kunstmatig overgangswater (10.3).
+- Gemengd: toegewezen na het berekenen van de focal window (zie hoofdstuk focal window)
+
+## FOCAL WINDOW
+
+
+
+- uitleg over de gaussian focal window (definieer, hoe, waarom, impact)
+    - waarom 100m en niet meer of minder (patch analyse tonen)
+    - Figuur met betrekking tot 
+    - Volledige cijfer uitzetten, hoeveel van iedere strata
+
+
+Een focal window van radius GaussianRadius 100m rond 100m met een gaussian distributie met sigma X als weights. We lopen dit over iedere UTM 10 x 10m pixels van FLEA kaart (todo: link).
+Nieuwe strata, vanuit de FLEA kaart ook, samengevoegd.
+Rechtstreeks van hieruit samplen.
+
+## OSM
+- eerdere problematiek van bereikbaarheid
+    - oplossing: openstreetmap -> buffer (beperk beweging to binnen de buffer, indien niet mogelijk dan verwijderen we dit punt)

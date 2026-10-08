@@ -1,0 +1,26 @@
+
+## PATCH ANALYSE
+
+## OPEN STREETMAP ANALYSE
+
+## POWER ANALYSE
+
+
+# VERWERKING VAN DE GEGEVENS
+
+- De flea kaarten worden herwerkt van de vorige jaren
+
+- Dezelfde modellen gebruiken, voorlopige vergelijking van de modellen uitschrijven (kijk hoe nuttig dit is, toont gewoon aan dat er geen al te grote veranderingen zouden moeten zijn)
+
+# TRENDBEREKENING
+
+- Opgelet voor veranderende weights van de data per FLEA kaart.
+
+# VOORSTELLING VAN DE GEGEVENS
+
+- Exact hetzelfde noormaal gezien
+
+# REPRODUCEERBAARHEID EN TRACEERBAARHEID VAN DE GEGEVENSVERWERKING
+
+- Verduidelijken dat we het eerdere script zullen runnen op de vorige aangemaakte kaarten. Deze passen we dan aan.
+- Manier van reproduceerbaarheid en traceerbaarheid houden we exact hetzelfde denk ik.

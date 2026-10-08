@@ -4,6 +4,7 @@ project:
     port: 4201
     browser: true
   render:
+    - "index.qmd"
     - "source/*.md"
     - "source/*.qmd"
     - "!LICENSE.md" #ignore LICENSE.md
@@ -13,7 +14,7 @@ project:
 flandersqmd:
   entity: INBO
   level: 2
-  title: "ABV2.0"
+  title: "Methodologie van het vernieuwd Meetnet Algemene Broedvogelmonitoring Vlaanderen (ABV2.0)"
   author:
     - name:
         given: "Stijn"
@@ -27,22 +28,18 @@ flandersqmd:
         family: "TBD"
   year: 2026
   reportnr: "I"
-  cover: media/cover.jpg
-
-
-
-
+  cover: media/cover2.jpg
 
 book:
   downloads: pdf
   open-graph: true
   sidebar:
-    logo: media/cover.jpg
+    logo: media/cover2.jpg
   body-footer: '{{< footer >}}'
   navbar:
     left:
       - text: Cover
-        file: source/index.qmd
+        file: index.qmd
     right:
       - icon: mastodon
         href: https://mastodon.online/@inbo
@@ -56,8 +53,9 @@ book:
             url:  https://github.com/inbo
   date: "8/10/2026"
   chapters:
-    - source/index.qmd
-    - source/intro.qmd
+    - index.qmd
+    - source/steekproef.qmd
+    - source/methodologie.qmd
     - source/summary.qmd
     - source/references.qmd
 
