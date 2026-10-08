@@ -1,0 +1,71 @@
+project:
+  type: book
+  preview:
+    port: 4201
+    browser: true
+  render:
+    - "*.md"
+    - "*.qmd"
+    - "!LICENSE.md" #ignore LICENSE.md
+    - "!README.md" #ignore README.md
+  output-dir: output
+
+flandersqmd:
+  entity: INBO
+  level: 2
+  title: "ABV2.0"
+  author:
+    - name:
+        given: "Stijn"
+        family: "Vandenbulcke"
+    - name:
+        given: "Thierry"
+        family: "Onckelinx"
+  reviewer:
+    - name:
+        given: "TBD"
+        family: "TBD"
+  year: 2026
+  reportnr: "I"
+  cover: media/cover.jpg
+
+
+
+
+
+book:
+  downloads: pdf
+  open-graph: true
+  sidebar:
+    logo: media/cover.jpg
+  body-footer: '{{< footer >}}'
+  navbar:
+    left:
+      - text: Cover
+        file: index.qmd
+    right:
+      - icon: mastodon
+        href: https://mastodon.online/@inbo
+      - icon: facebook
+        href: https://www.facebook.com/INBOVlaanderen/
+      - icon: github
+        menu:
+          - text: Source Code
+            url:  https://github.com/inbo
+          - text: Report a Bug
+            url:  https://github.com/inbo
+  date: "8/10/2026"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  flandersqmd-book-html: default
+  flandersqmd-book-pdf: default
+
+
+
