@@ -1,5 +1,6 @@
 project:
   type: book
+  execute-dir: project
   preview:
     port: 4201
     browser: true
@@ -28,13 +29,13 @@ flandersqmd:
         family: "TBD"
   year: 2026
   reportnr: "I"
-  cover: media/cover2.jpg
+  cover: media/cover4.jpg
 
 book:
   downloads: pdf
   open-graph: true
   sidebar:
-    logo: media/cover2.jpg
+    logo: media/cover4.jpg
   body-footer: '{{< footer >}}'
   navbar:
     left:

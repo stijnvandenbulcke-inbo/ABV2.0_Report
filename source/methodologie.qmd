@@ -1,3 +1,15 @@
+# STEEKPROEF
+
+- uitleg vertrekpunt van de kaart (FLEA)
+
+- uitleg over de gaussian focal window (definieer, hoe, waarom, impact)
+    - waarom 100m en niet meer of minder (patch analyse tonen)
+    - Volledige cijfer uitzetten, hoeveel van iedere strata
+
+\includegraphics[width=\linewidth]{media/ecosystem_extent_2022_level2-1.png}
+
+- eerdere problematiek van bereikbaarheid
+    - oplossing: openstreetmap -> buffer (beperk beweging to binnen de buffer, indien niet mogelijk dan verwijderen we dit punt)
 
 ## PATCH ANALYSE
 

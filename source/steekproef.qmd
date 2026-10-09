@@ -45,6 +45,36 @@ De FLEA kaart niveau 2 heeft 31 gedefiniëerde ecosysteem typologiën. De steekp
 
 ## FOCAL WINDOW
 
+Voor het focal window gebruikten we een gaussiaanse verdeling waarbij het centrum het grootste gewicht krijgt. De direct omgeving waar de vrijwilleger tellingen uitvoert, is dus het belangrijkste om de strata aan te wijzen. Maar we houden op deze manier nog steeds rekening met de verdere omgeving. 
+
+De keuze van de gaussiaanse distributie is gekozen door te vergelijken met een d van 50m,100m en 200m. We hebben gekozen voor 100m door de vraag om bossen van grootte X nog te kunnen behouden terwijl we kleinere weglaten. Met een kleinere cirkel tellen we alle kleine bossen mee, terwijl een cirkel van 200 m enkel de grootste bossen meetelt.
+
+TODO: insert cijfers
+
+
+Gewichtsverdeling van het gaussian focal window op een raster van 10 × 10 m. Het kleurgradiënt geeft het gewicht per pixel weer, waarbij de pixels in het centrum het hoogste gewicht dragen en de invloed afneemt naarmate de afstand tot het centrum toeneemt.
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#| label: focal-window-plot
+#| fig-width: 4
+#| fig-height: 4
+#| fig-cap: "Gaussiaans focal window met de hoogste gewichten in het centrum en afnemende invloed naar buiten."
+source("source/plot_kernel_weights.R")
+# lightweight raster met dezelfde eigenschappen als data van vlaanderen
+r_template <- rast(
+  ext = ext(22360, 258620, 153060, 244030),
+  nrows = 9097,
+  ncols = 23626,
+  crs = "EPSG:31370"
+)
+kernel_100m_B <- focalMat(
+  r_template,
+  d = 100 / 2.57,
+  type = "Gauss",
+  fillNA = TRUE
+)
+plot_focal_heatmap(kernel_100m_B, r_template)
+
+```
 
 
 - uitleg over de gaussian focal window (definieer, hoe, waarom, impact)
@@ -53,10 +83,9 @@ De FLEA kaart niveau 2 heeft 31 gedefiniëerde ecosysteem typologiën. De steekp
     - Volledige cijfer uitzetten, hoeveel van iedere strata
 
 
-Een focal window van radius GaussianRadius 100m rond 100m met een gaussian distributie met sigma X als weights. We lopen dit over iedere UTM 10 x 10m pixels van FLEA kaart (todo: link).
-Nieuwe strata, vanuit de FLEA kaart ook, samengevoegd.
-Rechtstreeks van hieruit samplen.
 
 ## OSM
+
+
 - eerdere problematiek van bereikbaarheid
     - oplossing: openstreetmap -> buffer (beperk beweging to binnen de buffer, indien niet mogelijk dan verwijderen we dit punt)

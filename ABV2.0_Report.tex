@@ -249,7 +249,7 @@ evalueert.}
 \author{}
 \date{2026-08-10}
 \begin{document}
-\includepdf[pages=1]{media/cover2.jpg}
+\includepdf[pages=1]{media/cover4.jpg}
 \maketitle
 
 
@@ -304,14 +304,17 @@ zijn er drie problemen.
   versnipperde gebieden.
 \item
   De twee strata ``Heide en duin'' en ``Moeras en water'', worden nu
-  geteld in hokken waarvan minimaal 20\% tot dat strata toebehoren. De
-  zes locaties waarin geteld worden zijn dus bijgevolg niet allemaal in
-  hetzelfde stratum.
+  geteld in hokken waarvan minimaal 20\% van het oppervlakte in het hok
+  tot het respectievelijk strata toebehoort. De zes locaties waarin
+  geteld worden kunnen in deze strata sterk verschillend zijn.
 \item
   De locaties waren niet altijd even bereikbaar.
 \end{itemize}
 
-Om deze problemen te verheffen, hebben we het meetnet opnieuw opgesteld.
+-\textgreater{} bewijs probleem 1 -\textgreater{} bewijs probleem 2
+-\textgreater{} probleem 3 is anecdotisch
+
+Het doel van het hernieuwde meetnet is om deze problemen te verheffen.
 
 \section{FLEA}\label{flea}
 
@@ -323,15 +326,10 @@ van bepaalde locaties veranderen.
 
 \includegraphics[width=\linewidth]{media/ecosystem_extent_2022_level2-1.png}
 
-De FLEA kaart niveau 2 heeft (X) aantal ecosysteem typologiën. De
-steekproef om ieder type correct te samplen zou te groot zijn. We nemen
-dus een aantal types samen tot (y) aantal strata. Deze zijn als volgt:
-
-\ldots{}
-
-De gedetailleerde typologieën van de ecosysteemkaart (Level 2) zijn op
-basis van de R-samenstelling hergegroepeerd in tien bredere
-hoofdcategorieën:
+De FLEA kaart niveau 2 heeft 31 gedefiniëerde ecosysteem typologiën. De
+steekproef om ieder verschillend type voldoende te samplen zou te groot
+zijn. We hergrouperen deze typologiën in tien bredere strata en een
+gemengde categorie:
 
 \begin{itemize}
 \tightlist
@@ -367,9 +365,44 @@ hoofdcategorieën:
 \item
   Getijdengebied en overgangswater: getijdenplaten (10.2) en kunstmatig
   overgangswater (10.3).
+\item
+  Gemengd: toegewezen na het berekenen van de focal window (zie
+  hoofdstuk focal window)
 \end{itemize}
 
 \section{FOCAL WINDOW}\label{focal-window}
+
+Voor het focal window gebruikten we een gaussiaanse verdeling waarbij
+het centrum het grootste gewicht krijgt. De direct omgeving waar de
+vrijwilleger tellingen uitvoert, is dus het belangrijkste om de strata
+aan te wijzen. Maar we houden op deze manier nog steeds rekening met de
+verdere omgeving.
+
+De keuze van de gaussiaanse distributie is gekozen door te vergelijken
+met een d van 50m,100m en 200m. We hebben gekozen voor 100m door de
+vraag om bossen van grootte X nog te kunnen behouden terwijl we kleinere
+weglaten. Met een kleinere cirkel tellen we alle kleine bossen mee,
+terwijl een cirkel van 200 m enkel de grootste bossen meetelt.
+
+insert cijfers
+
+Gewichtsverdeling van het gaussian focal window op een raster van 10 ×
+10 m. Het kleurgradiënt geeft het gewicht per pixel weer, waarbij de
+pixels in het centrum het hoogste gewicht dragen en de invloed afneemt
+naarmate de afstand tot het centrum toeneemt.
+
+TODO: cijfers met betrekking tot het aantal patches hiernaast zetten.
+
+\begin{figure}[H]
+
+{\centering \pandocbounded{\includegraphics[keepaspectratio]{source/steekproef_files/figure-pdf/focal-window-plot-1.pdf}}
+
+}
+
+\caption{Gaussiaans focal window met de hoogste gewichten in het centrum
+en afnemende invloed naar buiten.}
+
+\end{figure}%
 
 \begin{itemize}
 \tightlist
@@ -409,7 +442,39 @@ de FLEA kaart ook, samengevoegd. Rechtstreeks van hieruit samplen.
 
 \bookmarksetup{startatroot}
 
-\chapter{PATCH ANALYSE}\label{patch-analyse}
+\chapter{STEEKPROEF}\label{steekproef-1}
+
+\begin{itemize}
+\item
+  uitleg vertrekpunt van de kaart (FLEA)
+\item
+  uitleg over de gaussian focal window (definieer, hoe, waarom, impact)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    waarom 100m en niet meer of minder (patch analyse tonen)
+  \item
+    Volledige cijfer uitzetten, hoeveel van iedere strata
+  \end{itemize}
+\end{itemize}
+
+\includegraphics[width=\linewidth]{media/ecosystem_extent_2022_level2-1.png}
+
+\begin{itemize}
+\tightlist
+\item
+  eerdere problematiek van bereikbaarheid
+
+  \begin{itemize}
+  \tightlist
+  \item
+    oplossing: openstreetmap -\textgreater{} buffer (beperk beweging to
+    binnen de buffer, indien niet mogelijk dan verwijderen we dit punt)
+  \end{itemize}
+\end{itemize}
+
+\section{PATCH ANALYSE}\label{patch-analyse}
 
 \section{OPEN STREETMAP ANALYSE}\label{open-streetmap-analyse}
 
